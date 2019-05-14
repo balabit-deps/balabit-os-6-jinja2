@@ -1,3 +1,18 @@
+jinja2 (2.8-1ubuntu0.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: sandbox escape via str.format
+    - debian/patches/CVE-2016-10745-1.patch: support sandboxing in format
+      expressions in jinja2/nodes.py, jinja2/sandbox.py.
+    - debian/patches/CVE-2016-10745-2.patch: fix a name error for an
+      uncommon attribute access in the sandbox in jinja2/sandbox.py.
+    - CVE-2016-10745
+  * SECURITY UPDATE: sandbox escape via str.format_map
+    - debian/patches/CVE-2019-10906.patch: properly sandbox format_map in
+      jinja2/sandbox.py.
+    - CVE-2019-10906
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 14 May 2019 13:35:38 -0400
+
 jinja2 (2.8-1) unstable; urgency=medium
 
   * New upstream release
